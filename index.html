@@ -11,7 +11,7 @@
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 </head>
 <body>
-  <nav class="black" role="navigation">
+ <!-- <nav class="black" role="navigation">
     <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">Clickable</a>
       <ul class="right hide-on-med-and-down">
         <li><a href="#">Smaller Clickable</a></li>
@@ -22,7 +22,8 @@
       </ul>
       <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
     </div>
-  </nav>
+  </nav> -->
+  
   <div class="section no-pad-bot" id="index-banner">
     <div class="container">
       <br><br>
@@ -34,25 +35,59 @@
             <div class="input-field col s12">
               <i class="material-icons prefix">local_movies</i>
               <input type="text" id="autocomplete-input" class="autocomplete">
+              <!-- search field  -->
               <label for="autocomplete-input">Movie Title ...</label>
             </div>
           </div>
         </div>
       </div>
+      <!-- search button  -->
       <div class="row center">
-        <a id="download-button" class="btn-large waves-effect waves-light black">Search</a>
+        <button onclick="search()" class="btn-large waves-effect waves-light" type="submit" name="action">Search
+            <i class="material-icons right">search</i>
+        </button>
       </div>
       <br><br>
 
     </div>
   </div>
 
+<br>
+
+ <!--   Card section   -->
+ <div class="row">
+  <div class="col s6 offset-s3">
+    <div class="card large">
+      <div class="card-image">
+        <img src="https://m.media-amazon.com/images/M/MV5BNGNhMDIzZTUtNTBlZi00MTRlLWFjM2ItYzViMjE3YzI5MjljXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg" width="200" height="200">>
+        <span class="card-title">Card Title</span>
+      </div>
+      <div class="card-content">
+        <p>I am a very simple card. I am good at containing small bits of information.
+        I am convenient because I require little markup to use effectively.</p>
+      </div>
+      <div class="card-action">
+        <a href="#">This is a link</a>
+      </div>
+    </div>
+  </div>
+</div>
 
   <div class="container">
     <div class="section">
-
+     
       <!--   Icon Section   -->
-      <div class="col">
+      <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center light-dark-text"><i class="material-icons">local_movies</i></h2>
+            <h5 class="center">Trailer</h5>
+            <div class="video-container">
+              <iframe width="853" height="480" src="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley" frameborder="0" allowfullscreen></iframe>
+            </div>                    
+          </div>
+        </div>
+      
+      <!-- <div class="col">
         <div class="col s12 m4">
           <div class="icon-block">
             <h2 class="center light-dark-text"><i class="material-icons">equalizer</i></h2>
@@ -60,16 +95,7 @@
 
             <p class="light">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
           </div>
-        </div>
-
-        <div class="col s12 m4">
-          <div class="icon-block">
-            <h2 class="center light-dark-text"><i class="material-icons">local_movies</i></h2>
-            <h5 class="center">Grid 2 for API insert</h5>
-
-            <p class="light">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-          </div>
-        </div>
+        </div> -->
 
         
       </div>
@@ -78,7 +104,7 @@
     <br><br>
   </div>
 
-  <footer class="page-footer black">
+<!--  <footer class="page-footer black">
     <div class="container">
       <div class="row">
         <div class="col l6 s12">
@@ -112,10 +138,11 @@
        <a class="white-text text-lighten-3">Made by Cool Kids</a>
       </div>
     </div>
-  </footer>
+  </footer> -->
 
 
   <!--  Scripts-->
+  <script src="https://apis.google.com/js/api.js"></script>
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="js/materialize.js"></script>
   <script src="js/init.js"></script>
