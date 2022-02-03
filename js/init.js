@@ -19,8 +19,8 @@ function search() {
   localStorage.setItem('data',JSON.stringify(dataSaved));
   
   let omdbURL = 'https://www.omdbapi.com/?apikey=9a519566&t=';
-  let searchURL = omdbURL.concat(movie.value.replace(/ /g, "+"));
-  console.log(searchURL);
+  let searchURL = omdbURL.concat(movie.replace(/ /g, "+"));
+  console.log("searchurl" + searchURL);
   test123(searchURL);
   
   getResults(movie);
