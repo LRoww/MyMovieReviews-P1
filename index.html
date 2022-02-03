@@ -43,7 +43,7 @@
       </div>
       <!-- search button  -->
       <div class="row center">
-        <button onclick="search()" class="btn-large waves-effect waves-light" type="submit" name="action">Search
+        <button id="searchB" onclick="search()" class="btn-large waves-effect waves-light" type="submit" name="action">Search
             <i class="material-icons right">search</i>
         </button>
       </div>
@@ -59,12 +59,14 @@
   <div class="col s6 offset-s3">
     <div class="card large">
       <div class="card-image">
-        <img src="https://m.media-amazon.com/images/M/MV5BNGNhMDIzZTUtNTBlZi00MTRlLWFjM2ItYzViMjE3YzI5MjljXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg" width="200" height="200">>
+        <img id="posterC" src="https://m.media-amazon.com/images/M/MV5BNGNhMDIzZTUtNTBlZi00MTRlLWFjM2ItYzViMjE3YzI5MjljXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg" width="200" height="200">>
         <span class="card-title">Card Title</span>
       </div>
       <div class="card-content">
-        <p>I am a very simple card. I am good at containing small bits of information.
-        I am convenient because I require little markup to use effectively.</p>
+        <div id="Actors"></div>
+        <div id="Awards"></div>
+        <div id="Ratings"></div>
+        <div id="Plot"></div>
       </div>
       <div class="card-action">
         <a href="#">This is a link</a>
@@ -142,10 +144,13 @@
 
 
   <!--  Scripts-->
+  
   <script src="https://apis.google.com/js/api.js"></script>
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="js/materialize.js"></script>
   <script src="js/init.js"></script>
+  <script src="js/script2.js"></script>
+  
 
   </body>
 </html>

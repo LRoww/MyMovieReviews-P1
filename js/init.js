@@ -20,9 +20,9 @@ let movieData = {"Title":"Pulp Fiction","Year":"1994","Rated":"R","Released":"14
 
 
 //search function - alert to show grab from input field
-function search() {
-  let movie = document.getElementById("autocomplete-input").value; 
+//function search() {
+  //let movie = document.getElementById("autocomplete-input").value; 
   
-  alert(movie);
+  //alert(movie);
   
-}
+//}
