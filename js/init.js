@@ -16,7 +16,7 @@ function search() {
   dataSaved.data[movie]=null;
 
   localStorage.setItem('data',JSON.stringify(dataSaved))
-
+  getResults(movie);
 }
 
 //auto complete form part
@@ -26,16 +26,14 @@ $(document).ready(function(){
   $('input.autocomplete').autocomplete(dataStored);
 });
 
-let videoID;
 
-//search function - alert to show grab from input field
-function search() {
-  let movie = document.getElementById("autocomplete-input").value;
-  alert(movie);
+// //search function - alert to show grab from input field
+// function search() {
+//   let movie = document.getElementById("autocomplete-input").value;
 
-  // Get videoID and then sets display
-  getResults(movie);
-}
+//   // Get videoID and then sets display
+//   getResults(movie);
+// }
 
 
 function getResults(movie){
@@ -59,4 +57,4 @@ function showTrailer(){
   // console.log(url);
   // console.log( $('iframe'));
   $('iframe').attr('src', url);
-
+}
