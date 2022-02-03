@@ -3,7 +3,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
-  <title>Starter Template - Materialize</title>
+  <title>My Movie Info Site</title>
 
   <!-- CSS  -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -11,24 +11,24 @@
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 </head>
 <body>
- <!-- <nav class="black" role="navigation">
-    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">Clickable</a>
-      <ul class="right hide-on-med-and-down">
-        <li><a href="#">Smaller Clickable</a></li>
-      </ul>
-
-      <ul id="nav-mobile" class="sidenav">
-        <li><a href="#">Navbar Link</a></li>
-      </ul>
-      <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-    </div>
-  </nav> -->
+   <!--   Nav Bar   -->
+   <div class="navbar-fixed">
+    <nav>
+      <div class="nav-wrapper teal">
+        <a href="#index-banner" class="brand-logo" id="home">Home</a>
+        <ul class="right hide-on-med-and-down">
+          <li><a href="#info">Info</a></li>
+          <li><a href="#trailer">Trailer</a></li>
+        </ul>
+        </div>
+    </nav>
+  </div>
 
   <div class="section no-pad-bot" id="index-banner">
     <div class="container">
-      <br><br>
-      <h1 class="header center black-text">Movie Site Title Thing</h1>
-      <br><br>
+      <br>
+      <h1 class="header center black-text">My Movie Reviews</h1>
+      <br><br><br>
       <div class="row">
         <div class="col s12">
           <div class="row">
@@ -55,30 +55,36 @@
 <br>
 
  <!--   Card section   -->
- <div class="row">
-  <div class="col s6 offset-s3">
-    <div class="card">
-      <div class="card-image">
-        <img id="posterC" src="https://m.media-amazon.com/images/M/MV5BNGNhMDIzZTUtNTBlZi00MTRlLWFjM2ItYzViMjE3YzI5MjljXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg" width="200" height="200">>
-        <span class="card-title">Card Title</span>
-      </div>
-      <div class="card-content">
-        <div id="Title"></div>
-        <div id="Year"></div>
-        <div id="Actors"></div>
-        <div id="Awards"></div>
-        <div id="Ratings"></div>
-        <div id="Plot"></div>
-      </div>
-      </div>
+
+ <div class="container">
+  <div class="section" id="info">
+    
+   <div class="icon-block">
+    <h2 class="center light-dark-text"><i class="material-icons">info</i></h2>
+    <h5 class="center" id="Title">Movie Info</h5>
+    <br>
+<div class="col">
+<div class="col s12 m5">
+  <div class="card-panel teal">
+    <span class="white-text flow-text">
+      <ul>
+        <li id="Year"></li>
+        <li id="Actors"></li>
+        <li id="Awards"></li>
+        <li id="Ratings"></li>
+        <li id="Plot"></li>        
+      </ul>  
+    </span>
   </div>
 </div>
+</div>
+
 
   <div class="container">
     <div class="section">
      
       <!--   Icon Section   -->
-      <div class="col s12 m4">
+      <div class="col s12 m4" id="trailer">
           <div class="icon-block">
             <h2 class="center light-dark-text"><i class="material-icons">local_movies</i></h2>
             <h5 class="center">Trailer</h5>
@@ -86,60 +92,30 @@
               <iframe width="853" height="480" frameborder="0" allowfullscreen></iframe>
             </div>                    
           </div>
-        </div>
-      
-      <!-- <div class="col">
-        <div class="col s12 m4">
-          <div class="icon-block">
-            <h2 class="center light-dark-text"><i class="material-icons">equalizer</i></h2>
-            <h5 class="center">Grid 1 for API insert</h5>
-
-            <p class="light">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-          </div>
-        </div> -->
-
-        
+        </div>           
       </div>
-
     </div>
     <br><br>
   </div>
-
-<!--  <footer class="page-footer black">
+</div>
+</div>
+  <br><br><br><br>
+  <br><br><br><br>
+  <br><br><br><br>
+  <br><br><br><br>
+<!--  footer-->
+<footer class="page-footer black">
+  <div class="footer-copyright">
     <div class="container">
-      <div class="row">
-        <div class="col l6 s12">
-          <h5 class="white-text">Place Holder</h5>
-          <p class="grey-text text-lighten-4">Place holder text</p>
-
-
-        </div>
-        <div class="col l3 s12">
-          <h5 class="white-text">Settings</h5>
-          <ul>
-            <li><a class="white-text" href="#!">Link 1</a></li>
-            <li><a class="white-text" href="#!">Link 2</a></li>
-            <li><a class="white-text" href="#!">Link 3</a></li>
-            <li><a class="white-text" href="#!">Link 4</a></li>
-          </ul>
-        </div>
-        <div class="col l3 s12">
-          <h5 class="white-text">Connect</h5>
-          <ul>
-            <li><a class="white-text" href="#!">Link 1</a></li>
-            <li><a class="white-text" href="#!">Link 2</a></li>
-            <li><a class="white-text" href="#!">Link 3</a></li>
-            <li><a class="white-text" href="#!">Link 4</a></li>
-          </ul>
-        </div>
-      </div>
+     <a class="white-text text-lighten-3">Created by:</a>
+       <ul>
+         <li>Laura Rowe</li> 
+         <li>Julian Quan Fun</li> 
+         <li>Nicholas Patano</li> 
+       </ul>
     </div>
-    <div class="footer-copyright">
-      <div class="container">
-       <a class="white-text text-lighten-3">Made by Cool Kids</a>
-      </div>
-    </div>
-  </footer> -->
+  </div>
+</footer>
 
 
   <!--  Scripts-->
