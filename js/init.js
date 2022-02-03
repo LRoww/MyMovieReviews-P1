@@ -7,6 +7,7 @@
 })(jQuery); // end of jQuery name space
 
 //search function - alert to show grab from input field
+
 function search() {
   //get the value from the autocomplete
   let movie = document.querySelector("#autocomplete-input").value;
@@ -15,7 +16,13 @@ function search() {
 
   dataSaved.data[movie]=null;
 
-  localStorage.setItem('data',JSON.stringify(dataSaved))
+  localStorage.setItem('data',JSON.stringify(dataSaved));
+  
+  let omdbURL = 'https://www.omdbapi.com/?apikey=9a519566&t=';
+  let searchURL = omdbURL.concat(movie.value.replace(/ /g, "+"));
+  console.log(searchURL);
+  test123(searchURL);
+  
   getResults(movie);
 }
 
