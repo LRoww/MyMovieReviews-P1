@@ -1,16 +1,18 @@
 var searchButton = document.querySelector('#searchButton')
 var userMovie = document.querySelector('#autocomplete-input')
-var omdbURL = 'https://www.omdbapi.com/?apikey=9a519566&t='
-var searchURL = '';
+// var omdbURL = 'https://www.omdbapi.com/?apikey=9a519566&t='
+// var searchURL = '';
 var posterCard = document.querySelector('#posterC')
 var infoCard = document.querySelector('.card-content')
 let movieInfo = {};
 
-function search() {
-    searchURL = omdbURL.concat(userMovie.value.replace(/ /g, "+"));
-    console.log(searchURL);
-    test123();
-}   
+// combined with search functiuon in init
+
+// function search() {
+//     searchURL = omdbURL.concat(userMovie.value.replace(/ /g, "+"));
+//     console.log(searchURL);
+//     test123();
+// }   
 function printResults(data) {
     posterCard.src = data.Poster
     actorResults();
@@ -33,7 +35,7 @@ function actorResults() {
 }
 
 
-function test123 () {
+function test123 (searchURL) {
     fetch(searchURL)
     .then(function (response) {
         return response.json();
