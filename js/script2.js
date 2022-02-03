@@ -1,4 +1,4 @@
-var searchButton = document.querySelector('#searchB')
+var searchButton = document.querySelector('#searchButton')
 var userMovie = document.querySelector('#autocomplete-input')
 var omdbURL = 'https://www.omdbapi.com/?apikey=9a519566&t='
 var searchURL = '';
