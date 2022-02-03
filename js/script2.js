@@ -6,62 +6,60 @@ var posterCard = document.querySelector('#posterC')
 var infoCard = document.querySelector('.card-content')
 let movieInfo = {};
 
-// combined with search functiuon in init
-
-// function search() {
-//     searchURL = omdbURL.concat(userMovie.value.replace(/ /g, "+"));
-//     console.log(searchURL);
-//     test123();
-// }   
-function printResults(data) {
-    posterCard.src = data.Poster
-    actorResults();
-    // if we want to create the element 
-    // var actorEl = document.createElement('p')
-    // getElementById('actor div').appendchild(actorEl)
-    // and then set classes for styling
-    document.getElementById('Plot').textContent = "Plot: " + data.Plot
-    for (let i = 0; i < data.Ratings.length; i++) {
-    document.getElementById('Ratings').textContent += "Ratings: " + data.Ratings[i].Source + " " + data.Ratings[i].Value + " "
-    }
-}
-
-function actorResults() {
-    if (data.Actors === "N/A") {
-        document.getElementById.textContent = "Actors: none found"
-    } else {
-        document.getElementById('Actors').textContent = "Actors: " + data.Actors
-    }
-}
-
-
 function test123 (searchURL) {
     fetch(searchURL)
     .then(function (response) {
         return response.json();
     })
     .then(function (data) {
+        if (data.Response === 'False') {
+            alert("no movie found, please be as specific as possible")
+        } else {
         console.log(data)
         let objEmpty = JSON.stringify(data)
         movieInfo = JSON.parse(objEmpty)
-        console.log(movieInfo.Poster)
+        movieTitle(movieInfo)
+        movieYear(movieInfo)
         actorResults(movieInfo)
-        posterResults(movieInfo)
-        
+        awardResults(movieInfo)
+        moviePlot(movieInfo)
+        reviewResults(movieInfo)
+        }
     })
+    function movieTitle(movieInfo) {
+        document.getElementById('Title').textContent = movieInfo.Title
+    }
+    function movieYear(movieInfo) {
+        document.getElementById('Year').textContent = movieInfo.Year
+    }
     function actorResults(movieInfo) {
         if (movieInfo.Actors === "N/A") {
-            document.getElementById.textContent = "Actors: none found"
+            document.getElementById('Actors').textContent = "Actors: none found"
         } else {
             document.getElementById('Actors').textContent = "Actors: " + movieInfo.Actors
         }
     }
-    function posterResults(movieInfo) {
-        if (movieInfo.Poster === "N/A") {
-            posterCard.src = './assets/images/noPoster.png'
-            infoCard.textContent = "No results found, please try again."
+    function moviePlot(movieInfo) {
+        if (movieInfo.Plot === "N/A") {
+            document.getElementById('Plot').textContent = "No Plot Summary Found"
         } else {
-            posterCard.src = movieInfo.Poster
+            document.getElementById('Plot').textContent = "Plot: " + movieInfo.Plot
+        }
+    }
+    function reviewResults(movieInfo) {
+        if (movieInfo.Ratings === "N/A") {
+            document.getElementById('Ratings').textContent = "No Ratings Found"
+        } else {
+            for (let i = 0; i < movieInfo.Ratings.length; i++) {
+            document.getElementById('Ratings').textContent += movieInfo.Ratings[i].Source + " " + movieInfo.Ratings[i].Value + " "
+            }   
+        }
+    }
+    function awardResults(movieInfo) {
+        if (movieInfo.Awards === "N/A") {
+            document.getElementById('Awards').textContent = "No Awards Found"
+        } else {
+            document.getElementById('Awards').textContent = movieInfo.Awards
         }
     }
 }
