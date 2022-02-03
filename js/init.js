@@ -27,15 +27,6 @@ $(document).ready(function(){
 });
 
 
-// //search function - alert to show grab from input field
-// function search() {
-//   let movie = document.getElementById("autocomplete-input").value;
-
-//   // Get videoID and then sets display
-//   getResults(movie);
-// }
-
-
 function getResults(movie){
 
   let q = movie + "%20movie%20trailer";
