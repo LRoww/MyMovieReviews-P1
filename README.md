@@ -1,6 +1,6 @@
 # MyMovieReviews
 
-This site allows a user to look up a movie by title and view basic info on the movie, its review scores, and its trailer. It will also remember past serches and offer to autocomplete with that data if it matches which has been typed.
+This site allows a user to look up a movie by title so they can view a variety of information related to it. Such as a description, information on its cast, its review scores, and its trailer. It will also remember past searches and offer to autocomplete with that data if it matches which has been typed.
 
 ![Screenshot](assets/images/screenshot1.png)
 
