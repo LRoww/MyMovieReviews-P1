@@ -4,6 +4,8 @@ This site allows a user to look up a movie by title so they can view a variety o
 
 ![Screenshot](assets/images/screenshot.png)
 
+[Site Link](https://lroww.github.io/MyMovieReviews-P1/)
+
 # Technologies Used
 ## API's
 * [OMDb](http://www.omdbapi.com/)
