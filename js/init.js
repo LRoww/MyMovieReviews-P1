@@ -21,8 +21,7 @@ function search() {
   let omdbURL = 'https://www.omdbapi.com/?apikey=9a519566&t=';
   let searchURL = omdbURL.concat(movie.replace(/ /g, "+"));
   console.log("searchurl" + searchURL);
-  clearRatings();
-  test123(searchURL);
+  getOmdbApi(searchURL);
   
   getResults(movie);
 }
@@ -56,11 +55,4 @@ function showTrailer(){
   // console.log(url);
   // console.log( $('iframe'));
   $('iframe').attr('src', url);
-}
-
-function clearRatings() {
-  document.getElementById('Ratings').textContent = ""
-}
-function clearActors() {
-  document.getElementById('Actors').textContent = ""
 }
