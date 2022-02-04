@@ -12,6 +12,7 @@ function getOmdbApi (searchURL) {
             clearResults();
             document.getElementById('Actors').textContent = "No movie found, please be as specific as possible."
         } else {
+        clearResults();
         console.log(data)
         let objEmpty = JSON.stringify(data)
         movieInfo = JSON.parse(objEmpty)
